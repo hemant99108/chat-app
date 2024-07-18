@@ -1,3 +1,4 @@
+import MessageContainer from "../../components/messages/MessageContainer"
 import Sidebar from "../../components/sidebar/Sidebar"
 
 const Home = () => {
@@ -6,7 +7,7 @@ const Home = () => {
     backdrop-filter backdrop-blur-lg bg-opacity-0">
 
         <Sidebar/>
-        {/* <MessageContainer/> */}
+        <MessageContainer/>
 
     </div>
   )
