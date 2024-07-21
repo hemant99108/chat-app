@@ -9,11 +9,13 @@ const useGetMessages = () => {
 
 
   useEffect(()=>{
+
     const getMessages=async()=>{
+
         setLoading(true);
         try {
 
-            const res=await fetch(`/api/messages/${selectedConversation._id}`);
+            const res=await fetch(`/api/messages/${selectedConversation?._id}`);
             const data=await res.json();
 
             if(data.error) throw new Error(data.error);
@@ -25,7 +27,7 @@ const useGetMessages = () => {
             setLoading(false);
         }
     }
-        if(selectedConversation?._id) getMessages();
+        if(selectedConversation?._id) {getMessages();}
 
   },[selectedConversation?._id,setMessages]);
 

@@ -30,6 +30,7 @@ const SearchInput = () => {
     }else{
       toast.error('No such user found ');
     }
+    
   }
 
 
